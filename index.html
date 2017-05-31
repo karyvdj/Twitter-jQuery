@@ -3,11 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Twitter</title>
-    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/twitter.ico">
   </head>
   <body>
-    
+    <nav class="nav-bar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+  			<div class="navbar-header text-center">
+  				<p class="navbar-text">To Do App</p>
+  			</div>
+  		</div>
+    </nav>
+
+    <section class="container">
+      <form id="to-do-form">
+        <div class="form-group">
+          <label for="message">To do:</label>
+          <textarea id="message" class="form-control" rows="3" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default" name="button">Agregar</button>
+      </form>
+    </section>
+
+    <section id="posts" class="container">
+	  </section>
 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/app.js"></script>
