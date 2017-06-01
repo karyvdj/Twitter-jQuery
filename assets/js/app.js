@@ -1,5 +1,5 @@
 window.addEventListener("load", function() {
-  var toDoForm = document.getElementById('to-do-form');
+  var toDoForm = document.getElementById('twitter-form');
   toDoForm.addEventListener("submit", function (e){
     e.preventDefault();
     var contenedor = document.getElementById("posts");

@@ -1,6 +1,29 @@
 body {
-	padding-top: 70px;
+	padding-top: 130px;
+	background:#DFF1F1;
 }
 .nav-bar{
-  background: #56CBF4;
+  background: #20AED5;
+	padding: 20px;
+}
+.navbar-header .navbar-text{
+	color: white;
+}
+.navbar-brand img{
+	width: 30px;
+	/*margin-left: 20px;*/
+}
+.navbar-btn{
+	border-radius: 30px;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	margin:15px;
+}
+.navbar-btn:hover{
+	color: #20AED5;
+	background-color: white;
+}
+.color-text-blue{
+	color: #20AED5;
 }

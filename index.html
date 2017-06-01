@@ -5,25 +5,37 @@
     <title>Twitter</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/twitter.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/twitter2.ico">
   </head>
   <body>
     <nav class="nav-bar navbar-default navbar-fixed-top">
   		<div class="container-fluid">
-  			<div class="navbar-header text-center">
-  				<p class="navbar-text">To Do App</p>
+  			<div class="navbar-header row">
+          <a class="navbar-brand col-md-1 col-md-offset-2" href="#">
+            <img alt="Brand" src="assets/img/twitter.png">
+          </a>
+  				<h3 class="navbar-text col-md-1">Twitter</h3>
   			</div>
+        <div class="col-md-4 navbar-right">
+          <button type="button" class="btn btn-default navbar-btn">Iniciar sesión</button>
+          <button type="button" class="btn btn-default navbar-btn">Registrate</button>
+        </div>
   		</div>
     </nav>
 
     <section class="container">
-      <form id="to-do-form">
-        <div class="form-group">
-          <label for="message">To do:</label>
-          <textarea id="message" class="form-control" rows="3" name="message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-default" name="button">Agregar</button>
-      </form>
+      <div class="row">
+        <form id="twitter-form" class="col-md-6 col-md-offset-3">
+          <div class="form-group">
+            <label for="message" class="lead color-text-blue">Mensaje</label>
+            <textarea id="message" class="form-control" rows="8" name="message"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-default col-sm-2" name="button">Publicar</button>
+            <span id="contadorLetras" class="color-text-blue text-right col-sm-5 col-sm-offset-5">Caracteres: 0/140</span>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section id="posts" class="container">
