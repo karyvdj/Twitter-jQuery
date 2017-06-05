@@ -25,20 +25,33 @@
 
     <section class="container">
       <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <label for="areaAutor" class="lead color-text-blue">Autor</label>
+          <input type="text" id="areaAutor" data-length="25">
+        </div>
         <form id="twitter-form" class="col-md-6 col-md-offset-3">
           <div class="form-group">
             <label for="message" class="lead color-text-blue">Mensaje</label>
-            <textarea id="message" class="form-control" rows="8" name="message"></textarea>
+            <textarea id="areaTexto" class="form-control" rows="8" name="message"></textarea>
           </div>
           <div>
-            <button type="submit" class="btn btn-default col-sm-2" name="button">Publicar</button>
-            <span id="contadorLetras" class="color-text-blue text-right col-sm-5 col-sm-offset-5">Caracteres: 0/140</span>
+            <button type="submit" id="botonEnviar" class="btn col-sm-2 btn-publicar" name="button">Publicar</button>
+            <span id="cantidadCaracteres" class="color-text-blue text-right col-sm-5 col-sm-offset-5">Caracteres: 0/140</span>
           </div>
         </form>
       </div>
     </section>
 
-    <section id="posts" class="container">
+    <section class="container margitn-top">
+      <article id="publicaciones" class="row">
+        <div class="jumbotron col-xs-8 col-xs-offset-2">
+          <h3 >Karina</h3>
+          <p>Quiero helado!</p>
+          <button class='btn col-xs-1 col-xs-offset-11'>
+            <span class='glyphicon glyphicon-trash'></span>
+          </button>
+        </div>
+      </article>
 	  </section>
 
     <script src="assets/js/jquery-3.2.1.min.js"></script>

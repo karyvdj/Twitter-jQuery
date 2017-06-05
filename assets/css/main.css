@@ -1,6 +1,5 @@
 body {
 	padding-top: 130px;
-	background:#DFF1F1;
 }
 .nav-bar{
   background: #20AED5;
@@ -26,4 +25,30 @@ body {
 }
 .color-text-blue{
 	color: #20AED5;
+}
+.margitn-top{
+	margin-top: 30px;
+}
+.btn-publicar{
+	border-radius: 20px;
+	background-color: #F4B90F;
+	border: 1px solid #F4B90F;
+	color: white;
+}
+.btn-publicar:hover{
+	background-color: transparent;
+	color: #F4B90F;
+}
+.jumbotron{
+	background:#FFF8E3;
+	color: gray;
+}
+.jumbotron button{
+	background-color: #F3B029;
+	border-radius: 30px;
+	color: white;
+}
+.jumbotron button:hover{
+	background: #F2770C;
+	color: white;
 }
