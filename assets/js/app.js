@@ -1,24 +1,24 @@
-(function () {
+
     var contadorCaracteres = 0;
-})();
+
 
 var cargarPagina = function () {
     var areaTexto = $("#areaTexto");
     var areaAutor = $("#areaAutor");
     var botonEnviar = $("#botonEnviar");
-    areaTexto.keyup(contadoraDeCaracteres);
-    areaTexto.keyup(validarMensaje);
+    areaTexto.keyup(contadorCaracteres);
+    areaTexto.keyup(deshabilitarBtn);
     botonEnviar.click(publicarTwit);
 
-    $("#publicaciones article.card a").click(borrarTwit);
+    $("#publicaciones").click(borrarTwit);
 };
 
-var publicarTwit = function () {
-
+var publicarTwit = function (e) {
+    e.preventDefault(); //prevenir que se actualice la pagina
     var $seccionPublicaciones = $("#publicaciones");
 
-    var $tarjetaPublicacion = $("<div/>", {"class":"jumbotron"});
-    var $twitBorrar = $("<button class='borrar btn'><span class='glyphicon glyphicon-trash'></span></button>");
+    var $tarjetaPublicacion = $("<div/>", {"class":"jumbotron col-xs-8 col-xs-offset-2"});
+    var $twitBorrar = $("<button class='btn col-xs-1 col-xs-offset-11'><span class='glyphicon glyphicon-trash'></span></button>");
     var $twitNuevo = $("<p/>").text($(areaTexto).val());
     var $autorTwit = $("<h3/>").text($(areaAutor).val());
 
@@ -28,9 +28,10 @@ var publicarTwit = function () {
     $tarjetaPublicacion.append($twitNuevo)
     $seccionPublicaciones.prepend($tarjetaPublicacion);
 
+    vaciarAreas();
 };
 
-var contadoraDeCaracteres = function () {
+var contadorCaracteres = function () {
     var cantidadCaracteres = $("#cantidadCaracteres");
 
     contadorCaracteres = 140 - ($(areaTexto).val().length);
@@ -57,7 +58,7 @@ var vaciarAreas = function () {
     $(areaAutor).val("");
 };
 
-var validarMensaje = function () {
+var deshabilitarBtn = function () {
     var $botonEnviar = $("#botonEnviar");
     if ($(this).val().trim().length > 0 && $(this).val().trim().length <= 140) {
         $botonEnviar.removeAttr("disabled");
